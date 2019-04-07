@@ -28,7 +28,7 @@ public class Assignment3{
         storageQueue.enqueue(startingNode);
         Vertex<V> parentNode;
         Vertex<V> adjacentNode;
-        while (!storageQueue.isEmpty()) {
+        while (!storageQueue.isEmpty()) { // once queue is empty, the breadth-first will be done and augmentingPath will have shortest viable path
             parentNode = storageQueue.dequeue();
             for (Edge<E> e : FN.outgoingEdges(parentNode)) { // go down each path going away from current node
                 adjacentNode = FN.opposite(parentNode, e); // get the nodes adjacent to current node
